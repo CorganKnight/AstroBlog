@@ -1,8 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting.jsx";
 const pageTitle = "Home Page";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>this is a test text</h2>
+	<Greeting
+		client:load
+		messages={[
+			"Hi",
+			"Hello",
+			"Bom dia corno",
+			"Não tem caixa misteriosa, é só pica e bolo",
+		]}
+	/>
 </BaseLayout>
